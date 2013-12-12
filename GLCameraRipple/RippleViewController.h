@@ -50,8 +50,4 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface RippleViewController : GLKViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
-{
-	GLKTextureInfo *texture1;
-	GLKTextureInfo *texture2;
-}
 @end

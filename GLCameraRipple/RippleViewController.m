@@ -144,11 +144,11 @@ enum
 	
 	//create the GLKTextureInfo object
 	NSError *error;
-	texture1 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Background.png" ofType:Nil]
+	GLKTextureInfo *texture1 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Background.png" ofType:Nil]
 												   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
 													 error:&error]; assert(!error);
 	
-	texture2 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Liquid.png" ofType:Nil]
+	GLKTextureInfo *texture2 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Liquid.png" ofType:Nil]
 												   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
 													 error:&error]; assert(!error);
 
