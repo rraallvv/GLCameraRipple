@@ -31,6 +31,7 @@
 		B69AAFE513FC972A00B7125C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69AAFE413FC972A00B7125C /* CoreMedia.framework */; };
 		E42A7AAD185CE07A004E73CA /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = E42A7AAB185CE07A004E73CA /* Background.png */; };
 		E42A7AAE185CE07A004E73CA /* Liquid.png in Resources */ = {isa = PBXBuildFile; fileRef = E42A7AAC185CE07A004E73CA /* Liquid.png */; };
+		E4FA1131185CF1C800E2681F /* Blob.png in Resources */ = {isa = PBXBuildFile; fileRef = E4FA1130185CF1C800E2681F /* Blob.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		B69AAFE413FC972A00B7125C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E42A7AAB185CE07A004E73CA /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		E42A7AAC185CE07A004E73CA /* Liquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liquid.png; sourceTree = "<group>"; };
+		E4FA1130185CF1C800E2681F /* Blob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blob.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				B6388B2B141AB58300DA02FB /* Icon@2x.png */,
 				E42A7AAB185CE07A004E73CA /* Background.png */,
 				E42A7AAC185CE07A004E73CA /* Liquid.png */,
+				E4FA1130185CF1C800E2681F /* Blob.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				B6388B2F141AB58300DA02FB /* Icon-Small@2x.png in Resources */,
 				B6388B30141AB58300DA02FB /* Icon.png in Resources */,
 				E42A7AAD185CE07A004E73CA /* Background.png in Resources */,
+				E4FA1131185CF1C800E2681F /* Blob.png in Resources */,
 				B6388B31141AB58300DA02FB /* Icon@2x.png in Resources */,
 				E42A7AAE185CE07A004E73CA /* Liquid.png in Resources */,
 				B6198C4916C05C04000B9C73 /* Default-568h@2x.png in Resources */,
