@@ -29,8 +29,8 @@
 		B69AAFE013FC961F00B7125C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69AAFDF13FC961F00B7125C /* AVFoundation.framework */; };
 		B69AAFE313FC965400B7125C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69AAFE213FC965400B7125C /* CoreVideo.framework */; };
 		B69AAFE513FC972A00B7125C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69AAFE413FC972A00B7125C /* CoreMedia.framework */; };
-		E499A26318599D5200A3517F /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = E499A26118599D5200A3517F /* Background.png */; };
-		E499A26418599D5200A3517F /* Liquid.png in Resources */ = {isa = PBXBuildFile; fileRef = E499A26218599D5200A3517F /* Liquid.png */; };
+		E42A7AAD185CE07A004E73CA /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = E42A7AAB185CE07A004E73CA /* Background.png */; };
+		E42A7AAE185CE07A004E73CA /* Liquid.png in Resources */ = {isa = PBXBuildFile; fileRef = E42A7AAC185CE07A004E73CA /* Liquid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,8 +63,8 @@
 		B69AAFDF13FC961F00B7125C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B69AAFE213FC965400B7125C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		B69AAFE413FC972A00B7125C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		E499A26118599D5200A3517F /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
-		E499A26218599D5200A3517F /* Liquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liquid.png; sourceTree = "<group>"; };
+		E42A7AAB185CE07A004E73CA /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		E42A7AAC185CE07A004E73CA /* Liquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liquid.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,8 @@
 				B6388B29141AB58300DA02FB /* Icon-Small@2x.png */,
 				B6388B2A141AB58300DA02FB /* Icon.png */,
 				B6388B2B141AB58300DA02FB /* Icon@2x.png */,
+				E42A7AAB185CE07A004E73CA /* Background.png */,
+				E42A7AAC185CE07A004E73CA /* Liquid.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -134,8 +136,6 @@
 		B66E3E3A13E9E79C00D2ACF0 /* GLCameraRipple */ = {
 			isa = PBXGroup;
 			children = (
-				E499A26118599D5200A3517F /* Background.png */,
-				E499A26218599D5200A3517F /* Liquid.png */,
 				B6836C54141AE2AA005DB1A4 /* Shaders */,
 				B66E3E4313E9E79C00D2ACF0 /* AppDelegate.h */,
 				B66E3E4413E9E79C00D2ACF0 /* AppDelegate.m */,
@@ -229,9 +229,9 @@
 				B6388B2E141AB58300DA02FB /* Icon-Small.png in Resources */,
 				B6388B2F141AB58300DA02FB /* Icon-Small@2x.png in Resources */,
 				B6388B30141AB58300DA02FB /* Icon.png in Resources */,
-				E499A26318599D5200A3517F /* Background.png in Resources */,
+				E42A7AAD185CE07A004E73CA /* Background.png in Resources */,
 				B6388B31141AB58300DA02FB /* Icon@2x.png in Resources */,
-				E499A26418599D5200A3517F /* Liquid.png in Resources */,
+				E42A7AAE185CE07A004E73CA /* Liquid.png in Resources */,
 				B6198C4916C05C04000B9C73 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
