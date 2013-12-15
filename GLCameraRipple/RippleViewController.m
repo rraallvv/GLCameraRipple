@@ -79,7 +79,6 @@ enum
     CGFloat _screenHeight;
     size_t _textureWidth;
     size_t _textureHeight;
-    unsigned int _meshFactor;
     
     EAGLContext *_context;
     RippleModel *_ripple;
@@ -115,18 +114,6 @@ enum
     _screenHeight = [UIScreen mainScreen].bounds.size.height;
     view.contentScaleFactor = [UIScreen mainScreen].scale;
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        // meshFactor controls the ending ripple mesh size.
-        // For example mesh width = screenWidth / meshFactor.
-        // It's chosen based on both screen resolution and device size.
-        _meshFactor = 8;
-    }
-    else
-    {
-        _meshFactor = 4;
-    }
-	
 	[self setupGL];
 	
 	//create the framebuffer
@@ -163,9 +150,23 @@ enum
 		_textureWidth = texture1.width;
 		_textureHeight = texture1.height;
 		
+		unsigned int meshFactor;
+		
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+		{
+			// meshFactor controls the ending ripple mesh size.
+			// For example mesh width = screenWidth / meshFactor.
+			// It's chosen based on both screen resolution and device size.
+			meshFactor = 8;
+		}
+		else
+		{
+			meshFactor = 4;
+		}
+		
 		_ripple = [[RippleModel alloc] initWithScreenWidth:_screenWidth
 											  screenHeight:_screenHeight
-											 meshFactor:_meshFactor
+											 meshFactor:meshFactor
 											   touchRadius:5
 											  textureWidth:_textureWidth
 											 textureHeight:_textureHeight];
