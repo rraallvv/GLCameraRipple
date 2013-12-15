@@ -89,7 +89,7 @@ enum
 - (void)setupGL;
 - (void)tearDownGL;
 
-- (BOOL)loadShaders: (NSString *)name program:(GLuint *)program;
+- (BOOL)loadShadersNamed: (NSString *)name program:(GLuint *)program;
 - (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file;
 - (BOOL)linkProgram:(GLuint)prog;
 @end
@@ -116,40 +116,8 @@ enum
     
 	[self setupGL];
 	
-	//create the framebuffer
-	glGenFramebuffers(1, &_framebufferName);
-	glBindFramebuffer(GL_FRAMEBUFFER, _framebufferName);
-	
-	//create the GLKTextureInfo object
-	NSError *error;
-	GLKTextureInfo *texture1 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Background.png" ofType:Nil]
-												   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
-													 error:&error]; assert(!error);
-	
-	GLKTextureInfo *texture2 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Liquid.png" ofType:Nil]
-												   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
-													 error:&error]; assert(!error);
-
-	//bind the texture to texture unit 0
-	glActiveTexture(GL_TEXTURE0 + 0);
-	glBindTexture(texture1.target, texture1.name);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-	//bind the texture to texture unit 1
-	glActiveTexture(GL_TEXTURE0 + 1);
-	glBindTexture(texture2.target, texture2.name);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-	
-	if (_ripple == nil ||
-		texture1.width != _textureWidth ||
-		texture1.height != _textureHeight)
+	if (_ripple == nil)
 	{
-		_textureWidth = texture1.width;
-		_textureHeight = texture1.height;
-		
 		unsigned int meshFactor;
 		
 		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -236,8 +204,37 @@ enum
 {
 	[EAGLContext setCurrentContext:_context];
     
-    [self loadShaders:@"Shader1" program:&(_program1)];
-    [self loadShaders:@"Shader2" program:&(_program2)];
+    [self loadShadersNamed:@"Shader1" program:&(_program1)];
+    [self loadShadersNamed:@"Shader2" program:&(_program2)];
+	
+	//create the framebuffer
+	glGenFramebuffers(1, &_framebufferName);
+	glBindFramebuffer(GL_FRAMEBUFFER, _framebufferName);
+	
+	//create the GLKTextureInfo object
+	NSError *error;
+	GLKTextureInfo *texture1 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Background.png" ofType:Nil]
+																   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
+																	 error:&error]; assert(!error);
+	
+	GLKTextureInfo *texture2 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Liquid.png" ofType:Nil]
+																   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
+																	 error:&error]; assert(!error);
+	
+	//bind the texture to texture unit 0
+	glActiveTexture(GL_TEXTURE0 + 0);
+	glBindTexture(texture1.target, texture1.name);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	
+	//bind the texture to texture unit 1
+	glActiveTexture(GL_TEXTURE0 + 1);
+	glBindTexture(texture2.target, texture2.name);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	
+	_textureWidth = texture1.width;
+	_textureHeight = texture1.height;
 }
 
 - (void)tearDownGL
@@ -332,7 +329,7 @@ enum
 
 #pragma mark - OpenGL ES 2 shader compilation
 
-- (BOOL)loadShaders: (NSString *)name program:(GLuint *)program
+- (BOOL)loadShadersNamed: (NSString *)name program:(GLuint *)program
 {
     GLuint vertShader, fragShader;
     NSString *vertShaderPathname, *fragShaderPathname;
