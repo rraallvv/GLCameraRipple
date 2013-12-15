@@ -213,12 +213,12 @@ enum
 	
 	//create the GLKTextureInfo object
 	NSError *error;
-	GLKTextureInfo *texture1 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Background.png" ofType:Nil]
-																   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
+	GLKTextureInfo *texture1 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Background.png" ofType:nil]
+																   options:nil
 																	 error:&error]; assert(!error);
 	
-	GLKTextureInfo *texture2 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Liquid.png" ofType:Nil]
-																   options:@{GLKTextureLoaderOriginBottomLeft: @YES}
+	GLKTextureInfo *texture2 = [GLKTextureLoader textureWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Liquid.png" ofType:nil]
+																   options:nil
 																	 error:&error]; assert(!error);
 	
 	//bind the texture to texture unit 0
