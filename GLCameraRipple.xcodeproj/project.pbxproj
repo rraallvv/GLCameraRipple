@@ -21,8 +21,8 @@
 		B66E3E3913E9E79C00D2ACF0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66E3E3813E9E79C00D2ACF0 /* OpenGLES.framework */; };
 		B66E3E4113E9E79C00D2ACF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B66E3E4013E9E79C00D2ACF0 /* main.m */; };
 		B66E3E4513E9E79C00D2ACF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B66E3E4413E9E79C00D2ACF0 /* AppDelegate.m */; };
-		B66E3E4713E9E79C00D2ACF0 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B66E3E4613E9E79C00D2ACF0 /* Shader.fsh */; };
-		B66E3E4913E9E79C00D2ACF0 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = B66E3E4813E9E79C00D2ACF0 /* Shader.vsh */; };
+		B66E3E4713E9E79C00D2ACF0 /* Shader2.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B66E3E4613E9E79C00D2ACF0 /* Shader2.fsh */; };
+		B66E3E4913E9E79C00D2ACF0 /* Shader2.vsh in Resources */ = {isa = PBXBuildFile; fileRef = B66E3E4813E9E79C00D2ACF0 /* Shader2.vsh */; };
 		B66E3E4C13E9E79C00D2ACF0 /* RippleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66E3E4B13E9E79C00D2ACF0 /* RippleViewController.m */; };
 		B66E3E4F13E9E79C00D2ACF0 /* RippleViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66E3E4D13E9E79C00D2ACF0 /* RippleViewController_iPhone.xib */; };
 		B66E3E5213E9E79C00D2ACF0 /* RippleViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66E3E5013E9E79C00D2ACF0 /* RippleViewController_iPad.xib */; };
@@ -31,6 +31,9 @@
 		B69AAFE513FC972A00B7125C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69AAFE413FC972A00B7125C /* CoreMedia.framework */; };
 		E42A7AAD185CE07A004E73CA /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = E42A7AAB185CE07A004E73CA /* Background.png */; };
 		E42A7AAE185CE07A004E73CA /* Liquid.png in Resources */ = {isa = PBXBuildFile; fileRef = E42A7AAC185CE07A004E73CA /* Liquid.png */; };
+		E4781566185D4B9E008338CF /* Shader1.fsh in Resources */ = {isa = PBXBuildFile; fileRef = E4781562185D48F5008338CF /* Shader1.fsh */; };
+		E4781567185D4BA1008338CF /* Shader1.vsh in Resources */ = {isa = PBXBuildFile; fileRef = E4781563185D48F5008338CF /* Shader1.vsh */; };
+		E4781569185D7259008338CF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4781568185D7259008338CF /* CoreGraphics.framework */; };
 		E4FA1131185CF1C800E2681F /* Blob.png in Resources */ = {isa = PBXBuildFile; fileRef = E4FA1130185CF1C800E2681F /* Blob.png */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +58,8 @@
 		B66E3E4213E9E79C00D2ACF0 /* GLCameraRipple-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLCameraRipple-Prefix.pch"; sourceTree = "<group>"; };
 		B66E3E4313E9E79C00D2ACF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B66E3E4413E9E79C00D2ACF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B66E3E4613E9E79C00D2ACF0 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		B66E3E4813E9E79C00D2ACF0 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		B66E3E4613E9E79C00D2ACF0 /* Shader2.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader2.fsh; path = Shaders/Shader2.fsh; sourceTree = "<group>"; };
+		B66E3E4813E9E79C00D2ACF0 /* Shader2.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader2.vsh; path = Shaders/Shader2.vsh; sourceTree = "<group>"; };
 		B66E3E4A13E9E79C00D2ACF0 /* RippleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RippleViewController.h; sourceTree = "<group>"; };
 		B66E3E4B13E9E79C00D2ACF0 /* RippleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RippleViewController.m; sourceTree = "<group>"; };
 		B66E3E4E13E9E79C00D2ACF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RippleViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -66,6 +69,9 @@
 		B69AAFE413FC972A00B7125C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E42A7AAB185CE07A004E73CA /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		E42A7AAC185CE07A004E73CA /* Liquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liquid.png; sourceTree = "<group>"; };
+		E4781562185D48F5008338CF /* Shader1.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader1.fsh; path = Shaders/Shader1.fsh; sourceTree = "<group>"; };
+		E4781563185D48F5008338CF /* Shader1.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader1.vsh; path = Shaders/Shader1.vsh; sourceTree = "<group>"; };
+		E4781568185D7259008338CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E4FA1130185CF1C800E2681F /* Blob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blob.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4781569185D7259008338CF /* CoreGraphics.framework in Frameworks */,
 				B66E3E3313E9E79C00D2ACF0 /* UIKit.framework in Frameworks */,
 				B66E3E3513E9E79C00D2ACF0 /* Foundation.framework in Frameworks */,
 				B66E3E3713E9E79C00D2ACF0 /* GLKit.framework in Frameworks */,
@@ -125,6 +132,7 @@
 		B66E3E3113E9E79C00D2ACF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4781568185D7259008338CF /* CoreGraphics.framework */,
 				B69AAFE413FC972A00B7125C /* CoreMedia.framework */,
 				B69AAFE213FC965400B7125C /* CoreVideo.framework */,
 				B69AAFDF13FC961F00B7125C /* AVFoundation.framework */,
@@ -167,8 +175,10 @@
 		B6836C54141AE2AA005DB1A4 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				B66E3E4613E9E79C00D2ACF0 /* Shader.fsh */,
-				B66E3E4813E9E79C00D2ACF0 /* Shader.vsh */,
+				B66E3E4613E9E79C00D2ACF0 /* Shader2.fsh */,
+				B66E3E4813E9E79C00D2ACF0 /* Shader2.vsh */,
+				E4781562185D48F5008338CF /* Shader1.fsh */,
+				E4781563185D48F5008338CF /* Shader1.vsh */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -223,8 +233,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B66E3E4713E9E79C00D2ACF0 /* Shader.fsh in Resources */,
-				B66E3E4913E9E79C00D2ACF0 /* Shader.vsh in Resources */,
+				E4781567185D4BA1008338CF /* Shader1.vsh in Resources */,
+				E4781566185D4B9E008338CF /* Shader1.fsh in Resources */,
+				B66E3E4713E9E79C00D2ACF0 /* Shader2.fsh in Resources */,
+				B66E3E4913E9E79C00D2ACF0 /* Shader2.vsh in Resources */,
 				B66E3E4F13E9E79C00D2ACF0 /* RippleViewController_iPhone.xib in Resources */,
 				B66E3E5213E9E79C00D2ACF0 /* RippleViewController_iPad.xib in Resources */,
 				B6388B2C141AB58300DA02FB /* Icon-72.png in Resources */,
