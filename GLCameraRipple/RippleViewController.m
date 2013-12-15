@@ -437,10 +437,47 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 {
     glClear(GL_COLOR_BUFFER_BIT);
     
+	/*
     if (_ripple)
     {
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexVBO);
+		
+		glBindBuffer(GL_ARRAY_BUFFER, _positionVBO);
+		
+		glEnableVertexAttribArray(ATTRIB_VERTEX);
+		glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, GL_FALSE, 2*sizeof(GLfloat), 0);
+		
+		glBindBuffer(GL_ARRAY_BUFFER, _texcoordVBO);
+		
+		glEnableVertexAttribArray(ATTRIB_TEXCOORD);
+		glVertexAttribPointer(ATTRIB_TEXCOORD, 2, GL_FLOAT, GL_FALSE, 2*sizeof(GLfloat), 0);
+
         glDrawElements(GL_TRIANGLE_STRIP, [_ripple getIndexCount], GL_UNSIGNED_SHORT, 0);
     }
+	*/
+	
+	typedef struct {
+		GLfloat p[2];
+		GLfloat tc[2];
+	} vertex;
+	
+	vertex vetices[] =
+	{
+		{{-1,-1},	{1,0}},
+		{{-1,1},	{0,0}},
+		{{1,1},		{0,1}},
+		{{1,-1},	{1,1}}
+	};
+	
+	GLubyte indices[] = {0, 1, 2, 0, 2, 3};
+	
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	
+    glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, GL_FALSE, sizeof(vertex), (char *)vetices);
+    glVertexAttribPointer(ATTRIB_TEXCOORD, 2, GL_FLOAT, GL_FALSE, sizeof(vertex), (char *)vetices+offsetof(vertex, tc));
+	
+	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, indices);
 }
 
 #pragma mark - Touch handling methods
