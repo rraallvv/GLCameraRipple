@@ -224,14 +224,10 @@ enum
 	//bind the texture to texture unit 0
 	glActiveTexture(GL_TEXTURE0 + 0);
 	glBindTexture(texture1.target, texture1.name);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 	
 	//bind the texture to texture unit 1
 	glActiveTexture(GL_TEXTURE0 + 1);
 	glBindTexture(texture2.target, texture2.name);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 	
 	_textureWidth = texture1.width;
 	_textureHeight = texture1.height;
@@ -279,31 +275,6 @@ enum
     {
         glDrawElements(GL_TRIANGLE_STRIP, [_ripple getIndexCount], GL_UNSIGNED_SHORT, 0);
     }
-	
-	/*
-	typedef struct {
-		GLfloat p[2];
-		GLfloat tc[2];
-	} vertex;
-	
-	vertex vetices[] =
-	{
-		{{-.5,-.5},	{1,0}},
-		{{-.5,.5},	{0,0}},
-		{{.5,.5},	{0,1}},
-		{{.5,-.5},	{1,1}}
-	};
-	
-	GLubyte indices[] = {0, 1, 2, 0, 2, 3};
-	
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-	
-    glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, GL_FALSE, sizeof(vertex), (char *)vetices);
-    glVertexAttribPointer(ATTRIB_TEXCOORD, 2, GL_FLOAT, GL_FALSE, sizeof(vertex), (char *)vetices+offsetof(vertex, tc));
-	
-	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, indices);
-	*/
 }
 
 #pragma mark - Touch handling methods
